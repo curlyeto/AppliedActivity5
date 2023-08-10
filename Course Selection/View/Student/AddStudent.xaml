@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Course_Selection.View.Student.AddStudent"
+             Title="AddStudent">
+    <VerticalStackLayout
+         HorizontalOptions="Center" 
+         VerticalOptions="Center"
+        >
+        <Label
+            Text="Add Student"
+            FontSize="Large"
+            Margin="60,0"
+            TextColor="{DynamicResource Primary}"
+            
+            />
+        <StackLayout Orientation="Horizontal" Spacing="20" Margin="20">
+            <Image Source="https://icons.veryicon.com/png/o/miscellaneous/administration/account-25.png" WidthRequest="20" HeightRequest="20" />
+            <Entry Placeholder="Enter Student Id"   Text="{Binding StudentId}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="20" Margin="20">
+            <Image Source="https://static.vecteezy.com/system/resources/previews/000/581/808/original/lock-icon-vector-illustration.jpg" WidthRequest="20" HeightRequest="20" />
+            <Entry Placeholder="Enter Student Name"    IsPassword="False" Text="{Binding Name}" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="20" Margin="20">
+            <Image Source="https://static.vecteezy.com/system/resources/previews/000/581/808/original/lock-icon-vector-illustration.jpg" WidthRequest="20" HeightRequest="20" />
+            <Picker Title="Select a course"
+                    ItemsSource="{Binding CoursesList}"
+                    ItemDisplayBinding="{Binding Name}" 
+                    SelectedItem="{Binding Course}"/>
+        </StackLayout>
+        <Button Text="Add Student"
+                Margin="20"
+                VerticalOptions="Center"
+                 Command="{Binding AddStudent}"
+                HorizontalOptions="Center"
+                 />
+
+
+    </VerticalStackLayout>
+</ContentPage>

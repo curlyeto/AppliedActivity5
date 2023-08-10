@@ -55,7 +55,6 @@
                                              CommandParameter="{Binding .}"
                                         HorizontalOptions="Center"
                                     />
-
                                     </VerticalStackLayout>
                                 </Grid>
                             </Frame>

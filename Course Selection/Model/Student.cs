@@ -9,8 +9,10 @@ namespace Course_Selection.Model
     public class Student
     {
         public string Key;
-        public int StudentId { get; set; }
+        public string StudentId { get; set; }
         public string Name { get; set; }
-        public List<int> CourseList { get; set; }
+
+        public string CourseName { get; set; }
+     
     }
 }

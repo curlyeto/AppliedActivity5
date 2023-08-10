@@ -26,8 +26,7 @@ internal class CourseViewModel : INotifyPropertyChanged
     public event PropertyChangedEventHandler PropertyChanged;
     // RegisterBtn called we denifed before xmal file 
     public Command AddCoursePage { get; }
-    public Command EditCoursePage { get; }
-    public Command DeleteCourse { get; }
+
 
     public ICommand EditCoursePageCommand => new Command<Courses>(GoToEditCoursePage);
     public ICommand DeleteCourseCommand => new Command<Courses>(DeleteCoursePage);
@@ -39,8 +38,7 @@ internal class CourseViewModel : INotifyPropertyChanged
         this._navigation = navigation;
         // when register button click we define new method
         AddCoursePage = new Command(GoToAddCoursePage);
-        //EditCoursePage = new Command(GoToEditCoursePage);
-        //DeleteCourse = new Command(DeleteCoursePage);
+  
         var collection = firebaseClient.Child("Courses").AsObservable<Courses>().Subscribe((dbevent) =>
         {
             if (dbevent.Object != null)
