@@ -1,4 +1,4 @@
-# Course Selection App
+# Course Selection MAUI App
 
 It is a mobile application that allows adding courses and assigning courses to students. Course adding, deleting, updating and reading operations are carried out using the Firebase database.
 
